@@ -1,0 +1,21 @@
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--bg-secondary-color);
+	padding: var(--padding-md) var(--main-horizontal-padding);
+
+	a.nav-logo {
+		display: flex;
+	}
+
+	a.nav-favorites {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-sm);
+		color: var(--fg-secondary-color);
+		svg {
+			color: var(--primary-color);
+		}
+	}
+}

@@ -1,0 +1,6 @@
+.character-list {
+	display: grid;
+	width: 100%;
+	gap: var(--gap-md);
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}

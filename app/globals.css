@@ -1,0 +1,75 @@
+:root {
+	--max-width: 1400px;
+
+	--bg-color: #ffffff;
+	--bg-secondary-color: #000000;
+	--fg-color: #000000;
+	--fg-secondary-color: #ffffff;
+	--primary-color: #ec1d24;
+	--secondary-color: #00000;
+
+	--padding-sm: 12px;
+	--padding-md: 16px;
+	--padding-l: 24px;
+	--padding-xl: 32px;
+	--padding-xl2: 40px;
+	--padding-xl4: 48px;
+
+	--main-horizontal-padding: var(--padding-xl4);
+	--main-vertical-padding: var(--padding-xl4);
+
+	--main-padding: var(--main-vertical-padding) var(--main-horizontal-padding);
+
+	--margin-sm: 12px;
+	--margin-md: 16px;
+	--margin-l: 24px;
+	--margin-xl: 32px;
+	--margin-xl2: 40px;
+	--margin-xl4: 48px;
+
+	--font-heading-sm: 16px;
+	--font-heading-md: 24px;
+	--font-heading-l: 28px;
+	--font-heading-xl: 40px;
+
+	--gap-sm: 12px;
+	--gap-md: 16px;
+	--gap-l: 24px;
+
+	--rounded-xsm: 8px;
+	--rounded-sm: 12px;
+	--rounded-md: 16px;
+	--rounded-l: 24px;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: var(--font-heading-xl);
+}
+
+h2 {
+	font-size: var(--font-heading-l);
+}
+
+h3 {
+	font-size: var(--font-heading-md);
+}
+
+h4 {
+	font-size: var(--font-heading-sm);
+}
