@@ -5,7 +5,6 @@ import { CharacterList } from '@/features/Character/components/CharacterList/Cha
 
 export default async function Home({ params, searchParams }) {
 	const { data: characterResult } = await searchCharacters(searchParams.search);
-
 	return (
 		<main className={'main_characters__container'}>
 			<SearchForm resultCount={characterResult?.count || 0} />

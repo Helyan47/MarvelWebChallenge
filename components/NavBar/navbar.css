@@ -4,6 +4,9 @@ nav {
 	align-items: center;
 	background-color: var(--bg-secondary-color);
 	padding: var(--padding-md) var(--main-horizontal-padding);
+	border-bottom: 1px solid;
+
+	border-color: #333333;
 
 	a.nav-logo {
 		display: flex;

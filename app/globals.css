@@ -27,11 +27,13 @@
 	--margin-xl2: 40px;
 	--margin-xl4: 48px;
 
+	--font-heading-xsm: 12px;
 	--font-heading-sm: 16px;
-	--font-heading-md: 24px;
-	--font-heading-l: 28px;
+	--font-heading-md: 28px;
+	--font-heading-l: 32px;
 	--font-heading-xl: 40px;
 
+	--gap-xsm: 8px;
 	--gap-sm: 12px;
 	--gap-md: 16px;
 	--gap-l: 24px;
@@ -72,4 +74,9 @@ h3 {
 
 h4 {
 	font-size: var(--font-heading-sm);
+}
+
+* {
+	scrollbar-color: var(--primary-color) #d9d9d9;
+	scrollbar-width: thin;
 }

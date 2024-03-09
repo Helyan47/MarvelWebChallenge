@@ -9,7 +9,7 @@ export default function Page() {
 
 	return (
 		<main className={'main_favorites__container'}>
-			<h2>FAVORITES</h2>
+			<h3>FAVORITES</h3>
 			<SearchForm resultCount={favorites?.length || 0} />
 			<CharacterList characters={favorites || []} />
 		</main>

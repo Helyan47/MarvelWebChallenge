@@ -22,24 +22,10 @@ export const CharacterItem = ({ character }) => {
 	};
 
 	return (
-		<Link
-			className='character-item'
-			href={`/character/${character.id}`}
-			onClick={() => {
-				console.log('click');
-			}}
-		>
-			<div className='image-container'>
-				<Image
-					onError={() => {
-						console.log(character.thumbnail);
-					}}
-					src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-					sizes='100%'
-					alt={character.name}
-					fill
-				/>
-			</div>
+		<div className='character-item'>
+			<Link className='image-container' href={`/character/${character.id}`}>
+				<Image src={`${character.thumbnail.path}.${character.thumbnail.extension}`} sizes='100%' alt={character.name} fill />
+			</Link>
 			<div className='character-info-container'>
 				<div className='character-rectangle' />
 				<div className='character-info'>
@@ -49,6 +35,6 @@ export const CharacterItem = ({ character }) => {
 					</Button>
 				</div>
 			</div>
-		</Link>
+		</div>
 	);
 };
