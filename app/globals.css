@@ -56,7 +56,7 @@ body {
 }
 
 html {
-	scrollbar-width: 0px;
+	scrollbar-width: none;
 }
 
 a {
