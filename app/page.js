@@ -26,7 +26,7 @@ export const metadata = {
 export default async function Home({ params, searchParams }) {
 	const { data: characterResult } = await searchCharacters(searchParams.search);
 	return (
-		<main className={'main_characters__container'}>
+		<main className={'main_characters__container'} data-testid='character-list-main'>
 			<SearchForm resultCount={characterResult?.count || 0} />
 			<CharacterList characters={characterResult?.results || []} />
 		</main>

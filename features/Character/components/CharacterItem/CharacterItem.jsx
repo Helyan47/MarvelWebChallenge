@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import './character-item.css';
 
-export const CharacterItem = ({ character }) => {
+export const CharacterItem = ({ character, index }) => {
 	const { favorites, addFavourite, removeFavourite } = useAppContext();
 	const isFavourite = favorites.some((item) => item.id === character.id);
 
@@ -20,7 +20,7 @@ export const CharacterItem = ({ character }) => {
 	};
 
 	return (
-		<div className='character-item'>
+		<div className='character-item' data-testid={`character-item-${index}`}>
 			<Link className='image-container' href={`/character/${character.id}`}>
 				<Image src={`${character.thumbnail.path}.${character.thumbnail.extension}`} sizes='100%' alt={character.name} fill />
 			</Link>
@@ -28,7 +28,7 @@ export const CharacterItem = ({ character }) => {
 				<div className='character-rectangle' />
 				<div className='character-info'>
 					<span>{character.name}</span>
-					<Button buttonType={isFavourite ? 'fav-icon-toggled' : 'fav-icon'} onClick={handleFavClick}>
+					<Button buttonType={isFavourite ? 'fav-icon-toggled' : 'fav-icon'} onClick={handleFavClick} name='Add/Remove to favorite'>
 						{isFavourite ? <HeartFilledSVG width={12} height={11} /> : <HeartSVG width={12} height={11} />}
 					</Button>
 				</div>

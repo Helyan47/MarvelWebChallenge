@@ -8,7 +8,7 @@ export const CharacterList = ({ characters = [] }) => {
 			{characters.length === 0 ? (
 				<NoData sectionName='characters' />
 			) : (
-				<div className='character-list'>
+				<div className='character-list' data-testid='character-list-container'>
 					{characters.map((character, index) => {
 						return <CharacterItem key={character.id} character={character} index={index} />;
 					})}

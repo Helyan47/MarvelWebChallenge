@@ -34,7 +34,7 @@ const SearchForm = ({ resultCount = 0 }) => {
 			<form href='#' onSubmit={handleSubmit}>
 				<SearchInput name='search' aria-label='Search character' defaultValue={search} placeholder='SEARCH CHARACTER...' />
 			</form>
-			<p>{`${resultCount} ${resultCount === 1 ? 'RESULT' : 'RESULTS'}`}</p>
+			<p data-testid='result-number'>{`${resultCount} ${resultCount === 1 ? 'RESULT' : 'RESULTS'}`}</p>
 		</div>
 	);
 };

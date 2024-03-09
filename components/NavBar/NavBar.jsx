@@ -11,11 +11,11 @@ const NavBar = () => {
 
 	return (
 		<nav>
-			<Link href='/' className='nav-logo'>
+			<Link href='/' className='nav-logo' data-testid='main-logo'>
 				<Image src={'/logo.png'} alt='Marvel Logo' width={130} height={52} priority />
 			</Link>
 
-			<Link href={'/favorites'} className={'nav-favorites'}>
+			<Link href={'/favorites'} className={'nav-favorites'} data-testid='number-favorites'>
 				<HeartFilledSVG />
 				<span>{favorites.length || 0}</span>
 			</Link>

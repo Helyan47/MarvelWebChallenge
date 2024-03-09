@@ -19,7 +19,7 @@ export const CharacterDetail = ({ character }) => {
 	};
 
 	return (
-		<header className='character-header'>
+		<header className='character-header' data-testid='character-detail-container'>
 			<div className='info-container'>
 				<div className='character-image'>
 					<Image src={character.thumbnail.path + '.' + character.thumbnail.extension} alt={character.name} sizes='100%' priority fill />
@@ -27,7 +27,7 @@ export const CharacterDetail = ({ character }) => {
 				<div className='character-info'>
 					<header>
 						<h1>{character.name}</h1>
-						<Button buttonType={isFavourite ? 'fav-icon-toggled' : 'fav-icon'} onClick={handleFavClick}>
+						<Button buttonType={isFavourite ? 'fav-icon-toggled' : 'fav-icon'} onClick={handleFavClick} name='Add/Remove to favorite'>
 							{isFavourite ? <HeartFilledSVG /> : <HeartSVG />}
 						</Button>
 					</header>
