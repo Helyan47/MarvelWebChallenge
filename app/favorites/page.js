@@ -1,6 +1,6 @@
 'use client';
 import { useAppContext } from '@/contexts/AppContext';
-import SearchForm from '../_components/SearchForm';
+import SearchForm from '../../components/SearchForm/SearchForm';
 import { CharacterList } from '@/features/Character/components/CharacterList/CharacterList';
 import './page.css';
 

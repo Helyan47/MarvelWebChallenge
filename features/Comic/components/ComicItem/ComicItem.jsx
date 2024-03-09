@@ -1,16 +1,9 @@
 import Image from 'next/image';
 import './comic-item.css';
+import { getComicOnSaleYear } from '../../utils/comicUtils';
 
 export const CommicItem = ({ comic }) => {
-	const dateString = comic.dates.find((item) => item.type === 'onsaleDate')?.date;
-	let date;
-	if (dateString) {
-		try {
-			date = new Date(dateString).getFullYear();
-		} catch (e) {
-			// log error and continue
-		}
-	}
+	const date = getComicOnSaleYear(comic);
 	return (
 		<div className='comic-item'>
 			<div className='comic-image'>
@@ -18,7 +11,7 @@ export const CommicItem = ({ comic }) => {
 			</div>
 			<div className='comic-info'>
 				<p className='comic-title'>{comic.title}</p>
-				<span className='comic-year'>{date || ''}</span>
+				<span className='comic-year'>{date}</span>
 			</div>
 		</div>
 	);

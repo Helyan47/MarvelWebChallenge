@@ -1,5 +1,5 @@
 import { searchCharacters } from '@/features/Character/services/characterServices';
-import SearchForm from './_components/SearchForm';
+import SearchForm from '../components/SearchForm/SearchForm';
 import './page.css';
 import { CharacterList } from '@/features/Character/components/CharacterList/CharacterList';
 

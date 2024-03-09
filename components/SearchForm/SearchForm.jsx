@@ -1,8 +1,9 @@
 'use client';
 
-const { default: SearchInput } = require('@/components/common/SearchInput/SearchInput');
-const { useRouter, useSearchParams } = require('next/navigation');
-const { useCallback } = require('react');
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useCallback } from 'react';
+import SearchInput from '../common/SearchInput/SearchInput';
+import './search-form.css';
 
 const SearchForm = ({ resultCount = 0 }) => {
 	const router = useRouter();
@@ -29,12 +30,12 @@ const SearchForm = ({ resultCount = 0 }) => {
 	};
 
 	return (
-		<header className='search-wrapper'>
+		<div className='search-wrapper'>
 			<form href='#' onSubmit={handleSubmit}>
 				<SearchInput name='search' aria-label='Search character' defaultValue={search} placeholder='SEARCH CHARACTER...' />
 			</form>
 			<p>{`${resultCount} ${resultCount === 1 ? 'RESULT' : 'RESULTS'}`}</p>
-		</header>
+		</div>
 	);
 };
 
