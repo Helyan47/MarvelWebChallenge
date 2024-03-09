@@ -8,15 +8,11 @@ header.character-header {
 	.info-container {
 		display: flex;
 		width: 100%;
-		max-width: var(--max-section-width);
-		margin: 0 auto;
 
 		.character-image {
 			display: flex;
 			aspect-ratio: 1/1;
 			width: 100%;
-			max-width: 320px;
-			margin-right: 16px;
 			position: relative;
 
 			img {
@@ -28,8 +24,8 @@ header.character-header {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
+			gap: var(--gap-l);
 			width: 100%;
-			padding: var(--padding-xl4) 0px var(--padding-xl4) var(--padding-xl4);
 
 			& header {
 				display: flex;
@@ -59,10 +55,37 @@ header.character-header {
 }
 
 @media screen and (width > 1024px) {
+	.info-container {
+		max-width: var(--max-section-width);
+		margin: 0 auto;
+
+		.character-image {
+			max-width: 320px;
+		}
+
+		.character-info {
+			padding: var(--padding-xl4) 0px var(--padding-xl4) var(--padding-xl4);
+		}
+	}
 }
 
 @media screen and (width <= 1024px) {
+	.character-image {
+		max-width: 278px;
+	}
+	.character-info {
+		padding: var(--padding-xl4);
+	}
 }
 
 @media screen and (width <= 768px) {
+	.info-container {
+		flex-direction: column;
+		.character-image {
+			max-width: 100%;
+		}
+		.character-info {
+			padding: var(--padding-l) var(--padding-md) var(--padding-xl4) var(--padding-md);
+		}
+	}
 }

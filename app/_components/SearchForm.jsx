@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
 const { default: SearchInput } = require('@/components/common/SearchInput/SearchInput');
 const { useRouter, useSearchParams } = require('next/navigation');
 const { useCallback } = require('react');

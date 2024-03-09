@@ -12,11 +12,9 @@ export const CharacterItem = ({ character }) => {
 
 	const handleFavClick = (e) => {
 		e.preventDefault();
-		//e.stopPropagation();
 		if (isFavourite) {
 			removeFavourite(character.id);
 		} else {
-			//console.log('isFavourite', isFavourite);
 			addFavourite(character);
 		}
 	};

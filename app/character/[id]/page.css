@@ -10,7 +10,30 @@ main.character-main__container {
 		width: 100%;
 		max-width: var(--max-section-width);
 		margin: 0 auto;
-		padding: var(--margin-xl4) 0px;
 		gap: var(--gap-l);
+	}
+}
+
+@media screen and (width > 1024px) {
+	main.character-main__container {
+		section.comic-section {
+			padding: var(--margin-xl4) 0px;
+		}
+	}
+}
+
+@media screen and (width <= 1024px) {
+	main.character-main__container {
+		section.comic-section {
+			padding: var(--margin-xl4) 0px 0px var(--margin-xl4);
+		}
+	}
+}
+
+@media screen and (width <= 768px) {
+	main.character-main__container {
+		section.comic-section {
+			padding: var(--margin-xl4) 0px var(--margin-xl4) var(--margin-xl4);
+		}
 	}
 }

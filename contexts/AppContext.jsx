@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 export const AppContext = createContext(null);
 
+// Si se quiere mantener el estado entre pestañas, habría que descomentar las líneas comentadas. En este caso para ello se usaría localStorage, pero pueder ser cualquier otro método de persistencia.
 function AppContextProvider({ children }) {
 	const [favorites, setFavorites] = useState([]);
 
@@ -10,7 +11,7 @@ function AppContextProvider({ children }) {
 		if (favorites.find((fav) => fav.id === item.id)) return;
 		setFavorites((prev) => {
 			const newFavorites = [...prev, item];
-			localStorage.setItem('favorites', JSON.stringify(newFavorites));
+			//localStorage.setItem('favorites', JSON.stringify(newFavorites));
 			return newFavorites;
 		});
 	};
@@ -20,17 +21,17 @@ function AppContextProvider({ children }) {
 		const index = newFavorites.findIndex((fav) => fav.id === id);
 		if (index === -1) return;
 		newFavorites.splice(index, 1);
-		localStorage.setItem('favorites', JSON.stringify(newFavorites));
+		//localStorage.setItem('favorites', JSON.stringify(newFavorites));
 		setFavorites(newFavorites);
 	};
 
-	useEffect(() => {
-		const items = localStorage.getItem('favorites');
-		if (items && favorites.length === 0) {
-			const storedFavorites = JSON.parse(items);
-			setFavorites(storedFavorites);
-		}
-	}, [favorites]);
+	// useEffect(() => {
+	// 	const items = localStorage.getItem('favorites');
+	// 	if (items && favorites.length === 0) {
+	// 		const storedFavorites = JSON.parse(items);
+	// 		setFavorites(storedFavorites);
+	// 	}
+	// }, [favorites]);
 
 	return (
 		<AppContext.Provider

@@ -6,8 +6,6 @@ export const getCharacterCommics = async (id) => {
 	url.searchParams.append('orderBy', '-onsaleDate');
 	const response = await getBaseApiResponse(url);
 
-	console.log(response);
-
 	if (!response || !response.data) return;
 
 	return response.data.results;

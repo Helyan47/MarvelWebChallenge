@@ -1,5 +1,3 @@
-import md5 from 'md5';
-import { ssrFetch } from '../../../services/ssrFetch';
 import { getBaseApiResponse, getBaseApiUrl } from '@/services/baseApiService';
 
 export async function searchCharacters(search) {
@@ -7,7 +5,7 @@ export async function searchCharacters(search) {
 	if (search) {
 		url.searchParams.append('nameStartsWith', search);
 	}
-	url.searchParams.append('limit', process.env.API_CHARACTER_LIMIT);
+	url.searchParams.append('limit', process.env.API_CHARACTER_LIMIT || 50);
 
 	return await getBaseApiResponse(url);
 }
