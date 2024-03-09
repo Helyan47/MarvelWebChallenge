@@ -32,7 +32,7 @@ export const CharacterDetail = ({ character }) => {
 						</Button>
 					</header>
 					<section>
-						<p>{character.description || 'No description yet.'}</p>
+						<p>{character.description || 'No description yet...'}</p>
 					</section>
 				</div>
 			</div>

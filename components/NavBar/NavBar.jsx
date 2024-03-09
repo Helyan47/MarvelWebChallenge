@@ -3,8 +3,8 @@
 import { useAppContext } from '@/contexts/AppContext';
 import Link from 'next/link';
 import { HeartFilledSVG } from '@/assets/svg/HeartSVG';
-import MarvelSVG from '@/assets/svg/MarvelSVG';
 import './navbar.css';
+import Image from 'next/image';
 
 const NavBar = () => {
 	const { favorites } = useAppContext();
@@ -12,7 +12,7 @@ const NavBar = () => {
 	return (
 		<nav>
 			<Link href='/' className='nav-logo'>
-				<MarvelSVG />
+				<Image src={'/logo.png'} alt='Marvel Logo' width={130} height={52} priority />
 			</Link>
 
 			<Link href={'/favorites'} className={'nav-favorites'}>

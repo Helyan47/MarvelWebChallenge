@@ -3,6 +3,26 @@ import SearchForm from '../components/SearchForm/SearchForm';
 import './page.css';
 import { CharacterList } from '@/features/Character/components/CharacterList/CharacterList';
 
+export const metadata = {
+	metadataBase: new URL('http://localhost:3000'),
+	title: 'Marvel Characters',
+	description: 'A list of Marvel characters.',
+	openGraph: {
+		images: [
+			{
+				url: '/logo.png',
+			},
+		],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Marvel Characters',
+		description: 'A list of Marvel characters.',
+		creator: '@ivanmuinas',
+		images: ['/logo.png'],
+	},
+};
+
 export default async function Home({ params, searchParams }) {
 	const { data: characterResult } = await searchCharacters(searchParams.search);
 	return (
