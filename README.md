@@ -25,7 +25,7 @@ He divido la estructura del proyecto en las siguientes carpetas:
 
 ## Ejecución/Construcción del proyecto
 
-Previo a la ejecución de los proyectos, es necesario crear un archivo **.env.local** con las siguientes propiedades (sustituir sus valores por tus claves publicas y privadas):
+Previo a la ejecución del proyecto, es necesario crear un archivo **.env.local** con las siguientes propiedades (sustituir los valores por tus claves publicas y privadas):
 
 ```
 API_PUBLIC_KEY=YOUR_API_PUBLIC_KEY
