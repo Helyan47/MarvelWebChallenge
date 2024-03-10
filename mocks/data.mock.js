@@ -1,4 +1,61 @@
-export const comicList = [];
+export const comicList = [
+	{
+		id: 1,
+		title: 'Iron Man Comic 1',
+		thumbnail: {
+			path: 'http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55',
+			extension: 'jpg',
+		},
+		dates: [
+			{
+				type: 'onsaleDate',
+				date: '2021-07-01T00:00:00-0400',
+			},
+		],
+	},
+	{
+		id: 2,
+		title: 'Iron Man Comic 2',
+		thumbnail: {
+			path: 'http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55',
+			extension: 'jpg',
+		},
+		dates: [
+			{
+				type: 'onsaleDate',
+				date: '2020-07-01T00:00:00-0400',
+			},
+		],
+	},
+	{
+		id: 3,
+		title: 'Thor Comic 1',
+		thumbnail: {
+			path: 'http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55',
+			extension: 'jpg',
+		},
+		dates: [
+			{
+				type: 'onsaleDate',
+				date: '2023-07-01T00:00:00-0400',
+			},
+		],
+	},
+	{
+		id: 4,
+		title: 'Thor Comic 2',
+		thumbnail: {
+			path: 'http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55',
+			extension: 'jpg',
+		},
+		dates: [
+			{
+				type: 'onsaleDate',
+				date: '2022-07-01T00:00:00-0400',
+			},
+		],
+	},
+];
 
 export const characterList = [
 	{
@@ -11,24 +68,7 @@ export const characterList = [
 		},
 		comics: {
 			available: 1,
-			items: [
-				{
-					id: 1,
-					name: 'Iron Man Comic 1',
-					dates: {
-						type: 'onsaleDate',
-						date: '2021-07-01T00:00:00-0400',
-					},
-				},
-				{
-					id: 2,
-					name: 'Iron Man Comic 2',
-					dates: {
-						type: 'onsaleDate',
-						date: '2020-07-01T00:00:00-0400',
-					},
-				},
-			],
+			items: [comicList[0], comicList[1]],
 		},
 	},
 	{
@@ -41,24 +81,7 @@ export const characterList = [
 		},
 		comics: {
 			available: 1,
-			items: [
-				{
-					id: 1,
-					name: 'Thor Comic 1',
-					dates: {
-						type: 'onsaleDate',
-						date: '2023-07-01T00:00:00-0400',
-					},
-				},
-				{
-					id: 2,
-					name: 'Thor Comic 2',
-					dates: {
-						type: 'onsaleDate',
-						date: '2022-07-01T00:00:00-0400',
-					},
-				},
-			],
+			items: [comicList[2], comicList[3]],
 		},
 	},
 ];

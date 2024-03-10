@@ -1,8 +1,8 @@
 import { getCharacter } from '@/features/Character/services/characterServices';
 import './page.css';
 import { CharacterDetail } from '@/features/Character/components/CharacterDetail/CharacterDetail';
-import { getCharacterCommics } from '@/features/Comic/services/comicService';
-import { CommicList } from '@/features/Comic/components/ComicList/ComicList';
+import { getCharacterComics } from '@/features/Comic/services/comicService';
+import { ComicList } from '@/features/Comic/components/ComicList/ComicList';
 import { cache } from 'react';
 
 const getCharacterData = cache(async (id) => {
@@ -35,7 +35,7 @@ export async function generateMetadata({ params: { id } }) {
 export default async function Page({ params }) {
 	const { id } = params;
 	const characterResult = await getCharacterData(id);
-	const commics = await getCharacterCommics(id);
+	const comics = await getCharacterComics(id);
 
 	if (!characterResult) {
 		return <div>Character not found</div>;
@@ -44,7 +44,7 @@ export default async function Page({ params }) {
 	return (
 		<main className='character-main__container'>
 			<CharacterDetail character={characterResult} />
-			<CommicList comics={commics} />
+			<ComicList comics={comics} />
 		</main>
 	);
 }
