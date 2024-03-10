@@ -4,33 +4,29 @@
 	min-width: 180px;
 	max-width: 180px;
 	gap: var(--gap-sm);
-
-	.comic-image {
-		display: flex;
-		width: 100%;
-		position: relative;
-		aspect-ratio: 2/3;
-	}
-
-	.comic-info {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		gap: var(--gap-xsm);
-
-		.comic-title {
-			display: -webkit-box;
-			font-weight: 500;
-			font-size: var(--font-heading-sm);
-			-webkit-line-clamp: 2;
-			-webkit-box-orient: vertical;
-			line-clamp: 2;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-
-		.comic-year {
-			font-size: var(--font-heading-xsm);
-		}
-	}
+}
+.comic-item .comic-image {
+	display: flex;
+	width: 100%;
+	position: relative;
+	aspect-ratio: 0.6666666667;
+}
+.comic-item .comic-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: var(--gap-xsm);
+}
+.comic-item .comic-info .comic-title {
+	display: -webkit-box;
+	font-weight: 500;
+	font-size: var(--font-heading-sm);
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	line-clamp: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.comic-item .comic-info .comic-year {
+	font-size: var(--font-heading-xsm);
 }

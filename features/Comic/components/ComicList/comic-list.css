@@ -1,16 +1,15 @@
 .comic-section {
 	display: flex;
 	flex-direction: column;
-	h2 {
-		font-weight: 700;
-	}
-
-	.comic-list {
-		display: flex;
-		flex-direction: row;
-		overflow-x: auto;
-		overflow-y: hidden;
-		gap: var(--gap-md);
-		padding-bottom: var(--padding-l);
-	}
+}
+.comic-section h2 {
+	font-weight: 700;
+}
+.comic-section .comic-list {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	overflow-y: hidden;
+	gap: var(--gap-md);
+	padding-bottom: var(--padding-l);
 }

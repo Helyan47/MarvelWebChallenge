@@ -3,56 +3,46 @@
 	grid-template-rows: auto 1fr;
 	background-color: var(--bg-secondary-color);
 	color: var(--fg-secondary-color);
-
-	.image-container {
-		position: relative;
-		aspect-ratio: 1/1;
-		width: 100%;
-	}
-
-	.character-info-container {
-		display: flex;
-		position: relative;
-		width: 100%;
-
-		.character-rectangle {
-			position: absolute;
-			display: flex;
-			width: 100%;
-			height: 5px;
-			top: -5px;
-			background-color: var(--primary-color);
-			transition: height 0.3s ease-in-out;
-		}
-
-		.character-info {
-			display: flex;
-			width: 100%;
-			justify-content: space-between;
-			padding: var(--padding-md) var(--padding-md) var(--padding-l) var(--padding-md);
-			z-index: 1;
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			border-bottom: 13px solid var(--bg-color);
-			border-left: 13px solid transparent;
-
-			width: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 2;
-		}
-	}
-
-	&:hover {
-		.character-rectangle {
-			height: calc(100% + 5px);
-		}
-
-		.marvel-button.fav-icon-toggled {
-			--fg-color: var(--fg-secondary-color);
-		}
-	}
+}
+.character-item .image-container {
+	position: relative;
+	aspect-ratio: 1;
+	width: 100%;
+}
+.character-item .character-info-container {
+	display: flex;
+	position: relative;
+	width: 100%;
+}
+.character-item .character-info-container .character-rectangle {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 5px;
+	top: -5px;
+	background-color: var(--primary-color);
+	transition: height 0.3s ease-in-out;
+}
+.character-item .character-info-container .character-info {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: var(--padding-md) var(--padding-md) var(--padding-l) var(--padding-md);
+	z-index: 1;
+}
+.character-item .character-info-container::after {
+	content: '';
+	position: absolute;
+	border-bottom: 13px solid var(--bg-color);
+	border-left: 13px solid transparent;
+	width: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+}
+.character-item:hover .character-rectangle {
+	height: calc(100% + 5px);
+}
+.character-item:hover .marvel-button.fav-icon-toggled {
+	--fg-color: var(--fg-secondary-color);
 }
