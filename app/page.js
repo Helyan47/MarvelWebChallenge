@@ -4,7 +4,7 @@ import './page.css';
 import { CharacterList } from '@/features/Character/components/CharacterList/CharacterList';
 
 export const metadata = {
-	metadataBase: new URL('http://localhost:3000'),
+	metadataBase: new URL(process.env.VERCEL_ENV === 'production' ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'),
 	title: 'Marvel Characters',
 	description: 'A list of Marvel characters.',
 	openGraph: {
